@@ -9,7 +9,7 @@ pipeline{
       steps {
 	sh 'rm -rf *.var'
         sh 'jar -cvf StudentSurvey.war -C "Assignment2/src/main/webapp" .'     
-        sh 'docker build -t vmvst/studentsurvey:latest .'
+        sh 'docker bulidx build -t vmvst/studentsurvey:latest .'
       }
     }
     stage('Login') {
