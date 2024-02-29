@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f8ff; /* Light Blue Background */
+      font-family: 'Arial', sans-serif;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #007bff; /* Blue Button */
+      border-color: #007bff;
+    }
+    .btn-secondary {
+      background-color: #6c757d; /* Grey Button */
+      border-color: #6c757d;
+    }
+  </style>
+  <title>Student Survey Form</title>
+</head>
+<body>
+  <div class="container form-container">
+    <h3 class="text-center">Student Survey</h3>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">First Name *</label>
+          <input type="text" class="form-control" id="firstName" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName">Last Name *</label>
+          <input type="text" class="form-control" id="lastName" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="streetAddress">Street Address *</label>
+        <input type="text" class="form-control" id="streetAddress" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="city">City *</label>
+          <input type="text" class="form-control" id="city" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="state">State *</label>
+          <input type="text" class="form-control" id="state" required>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="zip">ZIP *</label>
+          <input type="text" class="form-control" id="zip" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telephone">Telephone Number *</label>
+        <input type="tel" class="form-control" id="telephone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfSurvey">Date of Survey *</label>
+        <input type="date" class="form-control" id="dateOfSurvey" required>
+      </div>
+
+      <div class="form-group">
+        <label for="likedMost">What did you like most about the campus?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="students" id="studentsCheckbox">
+          <label class="form-check-label" for="studentsCheckbox">Students</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="location" id="locationCheckbox">
+          <label class="form-check-label" for="locationCheckbox">Location</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="campus" id="campusCheckbox">
+          <label class="form-check-label" for="campusCheckbox">Campus</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="atmosphere" id="atmosphereCheckbox">
+          <label class="form-check-label" for="atmosphereCheckbox">Atmosphere</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="dormRooms" id="dormRoomsCheckbox">
+          <label class="form-check-label" for="dormRoomsCheckbox">Dorm Rooms</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="sports" id="sportsCheckbox">
+          <label class="form-check-label" for="sportsCheckbox">Sports</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>How did you become interested in the university?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="interestSource" value="friends" id="friendsRadio">
+          <label class="form-check-label" for="friendsRadio">Friends</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="interestSource" value="television" id="televisionRadio">
+          <label class="form-check-label" for="televisionRadio">Television</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="interestSource" value="internet" id="internetRadio">
+          <label class="form-check-label" for="internetRadio">Internet</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="interestSource" value="other" id="otherRadio">
+          <label class="form-check-label" for="otherRadio">Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="recommendation">Likelihood of Recommending *</label>
+        <select class="form-control" id="recommendation" required>
+          <option value="very-likely">Very Likely</option>
+          <option value="likely">Likely</option>
+          <option value="unlikely">Unlikely</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="raffle">Raffle (Enter at least ten comma-separated numbers 1-100) *</label>
+        <input type="text" class="form-control" id="raffle" pattern="^(\d{1,2},){9}\d{1,2}$" required>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Comments</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary">Cancel</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- Add other scripts as needed -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+docker logs  9644b6e246cd  2>&1 | grep "Bootstrap Password:"
+
+qv8dsh9j5c8d2smbq5m26s9msv4ptk59k554vt2m5b8phk5nxfj99t
+
+
+curl -fL https://44.194.53.245/system-agent-install.sh | sudo  sh -s - --server https://44.194.53.245 --label 'cattle.io/os=linux' --token p27q5ngtb2kpp7pflcch4sbvjqdjknsr9txjrlz5q4crs9kwb6x94k --ca-checksum 29571addffd21b54bd231d819c80fec0bbfae59a3d09af74e535114211f6e286 --etcd --controlplane --worker
+
+4b97955cfb1a4b47a47789b58ad0284f -jenkins admin pass
